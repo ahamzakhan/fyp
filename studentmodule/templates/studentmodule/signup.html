@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+#bcground
+{
+	background: url(https://i.pinimg.com/originals/53/d9/cd/53d9cd303086eae0decfed3d000fc976.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0px 0px 125px;
+  border: none;
+  border-radius: 15px;
+  cursor:pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height:600px;
+  width: 400px;
+  margin:0px 0px 0px 450px
+}
+
+</style>
+</head>
+
+
+<body id="bcground">
+
+
+<div>
+
+  <form method= "post" action="/student_signup/">
+    {% csrf_token %}
+    <h1 style="color:purple"><b>Sign Up</b></h1>
+    
+	<p style="font-size:15px; color:#C0C0C0;font">Please fill in this form to create an account!</p>
+	<hr style="margin:0px 0px 50px">
+	
+	<label for="fname">Roll No.</label>
+    <input type="text" id="fname" name="roll_no" placeholder="L161236">
+
+    <label for="EA">Email Address</label>
+    <input type="text" id="EA" name="emailAddress" placeholder="Your Email Address..">
+
+    <label for="key">Password</label>
+    <input type="Password" id="key" name="password" placeholder="Your Password..">
+	
+	<label for="verify">Confirm Password</label>
+	<input type="Password" id="verify" name="verification" placeholder="Re-enter Password..">
+	
+	<label for="campus">Fast-Campus</label>
+	<select id="campus" name="campus_name">
+	<option value="Islamabad">Islamabad</option>
+	<option value="Lahore">Lahore</option>
+	<option value="Chiniot">Chiniot</option>
+	<option value="Karachi">Karachi</option>
+	<option value="Peshawar">Peshawar</option>
+	</select>
+
+	<input type="submit" value="Submit">
+  
+  </form>
+</div>
+
+
+</body>
+
+
+
+</html>

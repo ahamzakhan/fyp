@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+#bcground
+{
+	background: url(https://i.pinimg.com/originals/53/d9/cd/53d9cd303086eae0decfed3d000fc976.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 0px;
+  margin-left: 130px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 30%;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+.a{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height:500px;
+  width: 400px;
+  margin:0px 0px 0px 450px
+}
+.b
+{
+	font-size:10px;
+	color:grey;
+	margin-bottom:30px;
+}
+
+
+</style>
+</head>
+
+
+<body id="bcground">
+<div class="a">
+  <form method="post" action="/admin_login/">
+    {% csrf_token %}
+
+  	<h1 style="color:purple; margin-bottom:65px; margin-left:100px;" ><b>Admin login</b></h1>
+  		
+  	<label>User Name</label>
+    <div class="input-container">
+  	<i class="fa fa-user icon"></i>
+      <input name="username"class="input-field" type="text" placeholder="Your Name..">
+    </div>
+  	
+     
+     <label>Password</label>
+     <div class="input-container";>
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" type="Password" placeholder="Password" name="psw">
+    </div>
+
+  	<input type="checkbox" id="remember" name="tick" value="save">
+  	<label for="remember" style="font-size:10px; color:grey;" >Remember me</label>
+  	<label style="font-size:15px; color:indigo; margin-left:200px" >Forget Password ?</label><br><br><br>
+
+    <button type="submit" class="btn">sign in</button>
+
+	</form>
+</div>
+
+
+</body>
+</html>
